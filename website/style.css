@@ -187,10 +187,15 @@ body {
     margin-top: auto;
 }
 
-.view-count {
+.view-count, .duration {
     display: flex;
     align-items: center;
     gap: 0.4rem;
+}
+
+svg {
+    stroke-width: 2.5px;
+    opacity: 0.8;
 }
 
 /* Footer */
