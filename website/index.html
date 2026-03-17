@@ -14,7 +14,7 @@
     <header class="navbar">
         <div class="container">
             <div class="logo">
-                <span class="logo-accent">BHANKAS</span> CAST
+                <span class="logo-accent">BHANKAS</span> Podcast API
             </div>
             <nav class="nav-links">
                 <a href="index.html" class="nav-link">Home</a>
@@ -39,7 +39,10 @@
 
         <section class="video-feed">
             <div class="container" id="videoContainer">
-                <div class="loader">Loading Cinematic Experience...</div>
+                <div class="loader">
+                    <div class="loader-spinner"></div>
+                    <span>Initializing Cinematic Experience...</span>
+                </div>
             </div>
         </section>
     </main>
@@ -54,6 +57,28 @@
             </div>
         </div>
     </footer>
+
+    <section class="video-player-modal" id="videoPlayerModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            <div class="player-container">
+                <div class="video-wrapper">
+                    <iframe id="youtubePlayer" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-details">
+                    <h2 id="modalVideoTitle">Video Title</h2>
+                    <div class="video-meta">
+                        <span id="modalVideoViews">0 Views</span>
+                        <span id="modalVideoDuration">00:00</span>
+                    </div>
+                    <p id="modalVideoDescription">Video description goes here...</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="app.js"></script>
 </body>
