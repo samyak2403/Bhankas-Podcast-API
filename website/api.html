@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation | Bhankas Cast</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="api-page">
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-accent">BHANKAS</span> CAST
+            </div>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="api.html" class="nav-link active">API Documentation</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="api-container">
+        <section class="api-hero">
+            <div class="container">
+                <h1>Developer <span>API</span></h1>
+                <p>Integrate Bhankas Podcast data into your own applications, websites, or research projects with our simple and powerful JSON interface.</p>
+            </div>
+        </section>
+
+        <section class="api-content container">
+            <div class="doc-section">
+                <h2>Endpoint Overview</h2>
+                <p>Our data is served as a static JSON file, updated every 5 minutes from our automated YouTube scraper.</p>
+                <div class="endpoint-box">
+                    <span class="method">GET</span>
+                    <code class="url" id="endpointUrl">https://raw.githubusercontent.com/samyak2403/Bhankas-Podcast-API/main/data/videos.json</code>
+                    <button class="copy-btn" onclick="copyText('endpointUrl', this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        Copy
+                    </button>
+                </div>
+            </div>
+
+            <div class="doc-section">
+                <h2>Data Schema</h2>
+                <p>The API returns an object containing global metadata and an array of individual video entries.</p>
+                <div class="code-header">
+                    Response Structure
+                    <button class="copy-btn" onclick="copyCode('schemaCode', this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        Copy
+                    </button>
+                </div>
+                <pre class="code-block"><code id="schemaCode">{
+  "last_updated": "ISO-8601 Timestamp",
+  "total_videos": 236,
+  "videos": [
+    {
+      "id": "Video ID String",
+      "title": "Episode Title",
+      "url": "YouTube URL",
+      "thumbnail": "Thumbnail Image URL",
+      "description": "Video Description Template",
+      "duration": 2513, // Seconds
+      "view_count": 149028,
+      "upload_date": null
+    }
+  ]
+}</code></pre>
+            </div>
+
+            <div class="doc-section">
+                <h2>Language Examples</h2>
+                <p>Use the following snippets to get started in your preferred language or environment.</p>
+
+                <div class="code-header">
+                    JavaScript (Browser/Node)
+                    <button class="copy-btn" onclick="copyCode('jsCode', this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        Copy
+                    </button>
+                </div>
+                <pre class="code-block"><code id="jsCode">fetch('https://raw.githubusercontent.com/samyak2403/Bhankas-Podcast-API/main/data/videos.json')
+  .then(res => res.json())
+  .then(data => console.log(`Loaded ${data.total_videos} episodes`));</code></pre>
+
+                <div class="code-header">
+                    Python
+                    <button class="copy-btn" onclick="copyCode('pythonCode', this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        Copy
+                    </button>
+                </div>
+                <pre class="code-block"><code id="pythonCode">import requests
+
+url = "https://raw.githubusercontent.com/samyak2403/Bhankas-Podcast-API/main/data/videos.json"
+data = requests.get(url).json()
+print(f"Latest episode: {data['videos'][0]['title']}")</code></pre>
+
+                <div class="code-header">
+                    Java (OkHttp)
+                    <button class="copy-btn" onclick="copyCode('javaCode', this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        Copy
+                    </button>
+                </div>
+                <pre class="code-block"><code id="javaCode">OkHttpClient client = new OkHttpClient();
+Request request = new Request.Builder()
+    .url("https://raw.githubusercontent.com/samyak2403/Bhankas-Podcast-API/main/data/videos.json")
+    .build();
+
+client.newCall(request).enqueue(new Callback() {
+    @Override
+    public void onResponse(Call call, Response response) throws IOException {
+        String jsonData = response.body().string();
+        System.out.println(jsonData);
+    }
+});</code></pre>
+
+                <div class="code-header">
+                    Kotlin (Retrofit/OkHttp)
+                    <button class="copy-btn" onclick="copyCode('kotlinCode', this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        Copy
+                    </button>
+                </div>
+                <pre class="code-block"><code id="kotlinCode">val client = OkHttpClient()
+val request = Request.Builder()
+    .url("https://raw.githubusercontent.com/samyak2403/Bhankas-Podcast-API/main/data/videos.json")
+    .build()
+
+client.newCall(request).enqueue(object : Callback {
+    override fun onResponse(call: Call, response: Response) {
+        val jsonData = response.body?.string()
+        println(jsonData)
+    }
+})</code></pre>
+
+                <div class="code-header">
+                    cURL
+                    <button class="copy-btn" onclick="copyCode('curlCode', this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        Copy
+                    </button>
+                </div>
+                <pre class="code-block"><code id="curlCode">curl -L https://raw.githubusercontent.com/samyak2403/Bhankas-Podcast-API/main/data/videos.json</code></pre>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Bhankas Cast. API powered by samyak2403.</p>
+        </div>
+    </footer>
+
+    <script>
+        function copyText(id, btn) {
+            const text = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                const original = btn.innerHTML;
+                btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Copied!';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.innerHTML = original;
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+
+        function copyCode(id, btn) {
+            const code = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(code).then(() => {
+                const original = btn.innerHTML;
+                btn.innerHTML = 'Copied!';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.innerHTML = original;
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
