@@ -11,3 +11,5 @@
 [![F-Droid](https://img.shields.io/f-droid/v/com.samyak.repostore.svg)](https://f-droid.org/packages/com.samyak.repostore)
 
 ![Downloads](https://img.shields.io/github/downloads/SamyakKamble/RepoStore/total)
+
+![Downloads](https://img.shields.io/github/downloads/yourrepo/total)
