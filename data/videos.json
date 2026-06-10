@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-06-10T16:02:49.540839",
+    "last_updated": "2026-06-10T18:39:23.005427",
     "total_videos": 268,
     "videos": [
         {
@@ -8,7 +8,7 @@
             "url": "https://www.youtube.com/watch?v=pLG9U2HHi-I",
             "thumbnail": "https://i.ytimg.com/vi/pLG9U2HHi-I/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLALu3nR8U8ixSrHnPlJQ8WuO1Wkew",
             "description": null,
-            "duration": null,
+            "duration": 1704.0,
             "view_count": null,
             "upload_date": null
         },
