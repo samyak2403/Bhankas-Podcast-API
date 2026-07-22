@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-07-22T16:43:07.531002",
+    "last_updated": "2026-07-22T17:56:01.003543",
     "total_videos": 277,
     "videos": [
         {
@@ -8,8 +8,8 @@
             "url": "https://www.youtube.com/watch?v=ZbHlNdgGCMQ",
             "thumbnail": "https://i.ytimg.com/vi/ZbHlNdgGCMQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLArnNYgFlHHx-ZGKgjlY5ei1P0Cpw",
             "description": null,
-            "duration": null,
-            "view_count": null,
+            "duration": 1835,
+            "view_count": 385,
             "upload_date": null
         },
         {
@@ -29,7 +29,7 @@
             "thumbnail": "https://i.ytimg.com/vi/BXsKdJcBwZE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCR0fHD2vOnNOW8t5Us48Xx9ROPjw",
             "description": null,
             "duration": 2558,
-            "view_count": 29000,
+            "view_count": 30000,
             "upload_date": null
         },
         {
@@ -1019,7 +1019,7 @@
             "thumbnail": "https://i.ytimg.com/vi/8Z0J5c15w3s/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDiXRHYSQRrCkR_6hUv3EjoCvKygA",
             "description": null,
             "duration": 2711,
-            "view_count": 183000,
+            "view_count": 184000,
             "upload_date": null
         },
         {
