@@ -1,7 +1,17 @@
 {
-    "last_updated": "2026-08-10T17:30:18.990926",
-    "total_videos": 281,
+    "last_updated": "2026-08-10T18:28:34.242038",
+    "total_videos": 282,
     "videos": [
+        {
+            "id": "UbGsSac1X0M",
+            "title": "Konkan Horror Ghost | Khavis Horror | Bhankas Podcast",
+            "url": "https://www.youtube.com/watch?v=UbGsSac1X0M",
+            "thumbnail": "https://i.ytimg.com/vi/UbGsSac1X0M/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAkpMEn0Fdvq9HYte74d4kPjqcLXQ",
+            "description": null,
+            "duration": 2709,
+            "view_count": 415,
+            "upload_date": null
+        },
         {
             "id": "l8xj5lmTOg0",
             "title": "Konkan Haunted Story | Marathi Stories | Bhankas Podcast",
@@ -9,7 +19,7 @@
             "thumbnail": "https://i.ytimg.com/vi/l8xj5lmTOg0/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBkRcuUAPU3woK2vRA_qkVIsG8HnA",
             "description": null,
             "duration": 1591,
-            "view_count": 32000,
+            "view_count": 33000,
             "upload_date": null
         },
         {
